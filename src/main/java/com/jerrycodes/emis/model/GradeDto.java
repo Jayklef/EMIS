@@ -1,0 +1,13 @@
+package com.jerrycodes.emis.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class GradeDto {
+
+    private String level;
+}
