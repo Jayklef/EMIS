@@ -1,13 +1,17 @@
 package com.jerrycodes.emis.model;
 
+import com.jerrycodes.emis.entity.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class GradeDto {
 
-    private String level;
+    private String name;
+
 }

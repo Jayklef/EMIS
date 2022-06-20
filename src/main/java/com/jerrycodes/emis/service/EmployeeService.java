@@ -6,9 +6,8 @@ import com.jerrycodes.emis.model.EmployeeDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.*;
 
 public interface EmployeeService {
     List<Employee> findAll();
@@ -23,11 +22,17 @@ public interface EmployeeService {
 
     Page<Employee> getEmployeeAndPagination(Integer pageNumber, Integer pageSize, String sortProperty);
 
-    Employee findEmplyeeById(Long id);
+    Employee findEmployeeById(Long id);
 
     ArrayList<Employee> findByBirthdate(Date birthdate);
 
     List<Client> findClientsByEmployeeId(Long id, Client client);
 
     long findNumberByEmployeeId(Long id);
+
+    BigDecimal findTotalAmountByEmployee(Long id, Client client);
+
+    Set<Map<String, BigDecimal>> findClientBalances(Long id);
+
+    List<Employee> findAllByGender(String gender);
 }

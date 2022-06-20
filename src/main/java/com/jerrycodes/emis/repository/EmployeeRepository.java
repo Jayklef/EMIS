@@ -15,5 +15,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> findByGender(String gender, Pageable pageable);
 
     ArrayList<Employee> findAllByBirthdate(Date birthdate);
+
+    List<Employee> findAllByGender(String gender);
     /*Pageable findByGender(String gender, Pageable pageable);*/
 }

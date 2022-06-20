@@ -1,5 +1,6 @@
 package com.jerrycodes.emis.model;
 
+import com.jerrycodes.emis.entity.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

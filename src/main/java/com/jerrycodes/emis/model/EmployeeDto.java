@@ -1,5 +1,7 @@
 package com.jerrycodes.emis.model;
 
+import com.jerrycodes.emis.entity.Department;
+import com.jerrycodes.emis.entity.Grade;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,4 +20,6 @@ public class EmployeeDto {
     private String email;
     private String phonenumber;
     private String address;
+    private Department department;
+    private Grade grade;
 }
