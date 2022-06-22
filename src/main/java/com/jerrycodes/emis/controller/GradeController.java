@@ -26,7 +26,7 @@ public class GradeController {
         return new ResponseEntity<>(grades, HttpStatus.OK);
     }
 
-    @PostMapping("/new-grade")
+    @PostMapping("/save")
     public ResponseEntity<Grade> createGrade(@Valid @RequestBody GradeDto gradeDto){
         Grade newGrade = gradeService.saveGrade(gradeDto);
         return new ResponseEntity<>(newGrade, HttpStatus.CREATED);
