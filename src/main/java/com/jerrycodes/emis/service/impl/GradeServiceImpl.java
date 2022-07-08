@@ -28,6 +28,8 @@ public class GradeServiceImpl implements GradeService {
 
         Grade grade = Grade.builder()
                 .name(gradeDto.getName())
+                .minSalary(gradeDto.getMinSalary())
+                .maxSalary(gradeDto.getMaxSalary())
                 .build();
         return gradeRepository.save(grade);
     }

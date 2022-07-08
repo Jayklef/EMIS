@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
@@ -22,7 +23,8 @@ public class Grade {
 
     @NotBlank(message = "Please enter employee grade")
     private String name;
-
+    private BigDecimal minSalary;
+    private BigDecimal maxSalary;
     @OneToMany(mappedBy = "grade")
     private Set<Employee> employee;
 }
