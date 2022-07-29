@@ -24,7 +24,9 @@ public class Grade {
     @NotBlank(message = "Please enter employee grade")
     private String name;
     private BigDecimal minSalary;
+
     private BigDecimal maxSalary;
+
     @OneToMany(mappedBy = "grade")
     private Set<Employee> employee;
 }
