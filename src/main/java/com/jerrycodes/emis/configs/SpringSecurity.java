@@ -32,7 +32,7 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
                 http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
                 http.authorizeRequests().anyRequest().permitAll();
-                http.addFilter(new authenticationManagerBean());
+                http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
 
     }
 
