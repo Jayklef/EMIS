@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.client.RestTemplate;
@@ -16,7 +17,7 @@ import java.util.UUID;
 
 @SpringBootApplication
 @EnableSwagger2
-//@EnableWebSecurity
+@EnableWebSecurity
 public class EmisApplication {
 
     public static void main(String[] args) {
