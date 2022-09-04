@@ -1,7 +1,10 @@
 package com.jerrycodes.emis;
 
 import com.jerrycodes.emis.entity.Employee;
+import com.jerrycodes.emis.model.UserModel;
+import com.jerrycodes.emis.service.UserService;
 import lombok.NonNull;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -40,5 +43,14 @@ public class EmisApplication {
     @Bean
     public BCryptPasswordEncoder encoder(){
         return new BCryptPasswordEncoder();
+    }
+    @Bean
+    CommandLineRunner run(UserService userService){
+        return args -> {
+            userService.saveUser(new UserModel("jerry", "1234", "jerry@woodcoreapp.com"));
+            userService.saveUser(new UserModel("Blaze", "3457", "blaze@woodcoreapp.com"));
+            userService.saveUser(new UserModel("bode", "9876", "bode@woodcoreapp.com"));
+            userService.saveUser(new UserModel("amilo", "87987", "amilo@woodcoreapp.com"));
+        };
     }
 }

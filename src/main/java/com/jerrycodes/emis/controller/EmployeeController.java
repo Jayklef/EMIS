@@ -79,9 +79,9 @@ public class EmployeeController {
         return new ResponseEntity<>(updatedEmployee, HttpStatus.OK);
     }
 
-    @GetMapping("/{pageandsortemployees}/{pagenumber}/{pagesize}")
+    @GetMapping("/pageAndSortEmployees/{pageNumber}/{pageSize}")
     public Page<Employee> employeePagination(@PathVariable("pageNumber") Integer pageNumber,
-                                                @PathVariable("pagesize") Integer pageSize){
+                                                @PathVariable("pageSize") Integer pageSize){
        /* Pageable pageable = PageRequest.of(pageNumber, pageSize); */
         return employeeService.getEmployeePagination(pageNumber, pageSize);
     }
